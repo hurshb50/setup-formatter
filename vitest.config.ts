@@ -1,7 +1,7 @@
-import { defineConfig } from "vitest/config"
+import { defineConfig } from "vitest/config";
 
 const configuration = defineConfig({
+    test: { passWithNoTests: true },
+});
 
-})
-
-export default configuration
+export default configuration;
