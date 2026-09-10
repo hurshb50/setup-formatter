@@ -1,0 +1,28 @@
+{
+  "name": "setup-formatter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "bun build ./source/setup-formatter.ts --outdir ./distribution --target node --format esm --minify",
+    "format-check": "oxfmt . --check",
+    "format-fix": "oxfmt .",
+    "lint-check": "oxlint .",
+    "lint-fix": "oxlint . --fix",
+    "test-run": "vitest --run",
+    "test-watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/bun": "latest",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  },
+  "files": ["distribution"],
+  "bin": "./distribution/setup-formatter.js",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/hurshb50/setup-formatter.git"
+    }
+}
